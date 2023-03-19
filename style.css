@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --gradient:repeating-linear-gradient(40deg,rgb(162, 142, 226), rgb(219, 118, 236), rgb(110, 214, 248), rgb(214, 214, 117), rgb(255, 149, 165), rgb(238, 124, 187));
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background:linear-gradient(45deg,rgb(15, 15, 15) ,rgb(37, 37, 37) ,rgb(83, 83, 83));
+}
+
+.calen_contain{
+    width:33rem;
+    height:45rem;
+    background:transparent;
+    border-radius:1rem;
+    font-family:'Poppins', sans-serif;
+    box-shadow:0.3rem 0.3rem 1rem rgba(0, 0, 0, 0.315);
+}
+
+
+
+.top_section{
+    height:20%;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(0deg,rgb(164, 66, 202) 10% ,rgb(93, 184, 245));
+    color:rgb(109, 245, 255);
+    text-shadow: 0 0 0.3rem rgb(37, 98, 102);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.top_section .month{
+    font-size:2.4rem;
+    transition:scale 400ms ease-out;
+    
+}
+
+.top_section .current_date{
+    font-size:1.2rem;
+    font-weight:500;
+    transition: scale 400ms ease-out;
+}
+
+.top_section .month:hover,
+.top_section .current_date:hover{
+    scale:1.1;
+}
+
+.bottom_section{
+    display:flex;
+    flex-direction: column;
+    row-gap: 0.6rem;
+    height:80%;
+    background: linear-gradient(0deg, rgb(37, 47, 143),rgb(140, 42, 179) 140%);
+    color:white;
+    padding:0 0.2rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.bottom_section .days{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    justify-items:center;
+    align-items: center;
+    height:3rem;
+    font-weight:500;
+    font-size:1.1rem;
+}
+
+.bottom_section .dates{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    justify-items:center;
+    align-items: center;
+}
+
+.bottom_section .dates .date_nums{
+    width:100%;
+    aspect-ratio:1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.2rem;
+    border-radius:0.3rem;
+    transition:background-color 200ms ease-out;
+}
+
+.bottom_section .dates .date_nums:hover{
+    background-color: rgba(133, 197, 250, 0.623);
+    background-blend-mode: soft-light;
+}
+
+.bottom_section .dates .current{
+    background:var(--gradient);
+    background-size:400%;
+    transition:scale 450ms,
+    background-position 10s;
+    background-position:left;
+}
+.bottom_section .dates .current:hover{
+    background:var(--gradient);
+    background-size:400%;
+    /* animation:bg-animation 5s infinite alternate;
+    animation-fill-mode: both; */
+    scale:1.1;
+    background-position:right;
+}
+
+/* @keyframes bg-animation{
+    0% {background-position:left;}
+    100% {background-position:right;}
+} */
