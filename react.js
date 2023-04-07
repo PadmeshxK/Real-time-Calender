@@ -12,7 +12,7 @@ function calen_info_find(){
     let month_name = month_names[month]
     let day = temp_d.getDay()
     let day_name = weekday[day]
-    const date = temp_d.getDate()
+    let date = temp_d.getDate()
     let year = temp_d.getFullYear()
     const leap_check = checkLeapYear(year)
     let max_date = null
@@ -59,7 +59,6 @@ function add_info(){
         temp_dates_div.innerText = i
         date_contain_ele.appendChild(temp_dates_div)
     }
-    console.log(firstDay)
     info_arr[0] = Number(info_arr[0])
     let date_child = date_contain_ele.children
     date_child[0].style = `grid-column-start:${firstDay.getDay()}`
